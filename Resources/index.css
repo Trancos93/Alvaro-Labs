@@ -1,0 +1,152 @@
+html {
+    box-sizing: border-box;
+}
+  /*Regular*/
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./Fonts/IBMPlexMono-Regular.ttf') format('truetype'),
+         url('./Fonts/ibmplexmono-regular-webfont.woff2') format('woff2'),   
+         url('./Fonts/ibmplexmono-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;      
+}
+
+/*Italic*/
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./Fonts/IBMPlexMono-Italic.ttf') format('truetype'),
+         url('./Fonts/ibmplexmono-italic-webfont.woff2') format('woff2'),   
+         url('./Fonts/ibmplexmono-italic-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}      
+
+/*Bold*/
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./Fonts/IBMPlexMono-Bold.ttf') format('truetype'),
+         url('./Fonts/ibmplexmono-bold-webfont.woff2') format('woff2'),   
+         url('./Fonts/ibmplexmono-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}  
+
+/*Italic-bold*/
+@font-face {
+    font-family: 'IBM Plex Mono';
+    src: url('./Fonts/IBMPlexMono-SemiBoldItalic.ttf') format('truetype'),
+         url('./Fonts/ibmplexmono-semibolditalic-webfont.woff2') format('woff2'),   
+         url('./Fonts/ibmplexmono-semibolditalic-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}  
+
+html, body {
+    display: flex;                           /*this makes html and body elements have a flexbox layout for easier positioning of their elements */
+    flex-direction: column;                  /*Stablishes the direction of elements inside the flexbox */ 
+    margin: 0;                               /*Reduces the sites' borders to 0, so that all the content occupies the whole page*/  
+    padding: 0;                               /*same as the above*/  
+}
+
+
+body {
+    font-family: 'IBM Plex Mono', Arial;    /*Defines the font of use, as well as a fallback font */
+    overflow: scroll;                        /*Overflow property defines how the excess of content will behave, in this case I'll leave it as scroll. If there's excess text, a scrollbar will appear to help see all the content*/
+}
+
+header {
+    display: flex;                          /* although html, body have their own flex declaration, it doesn`t cascade to grandchildren, so each child must have it's own declaration of display: fex; */
+    align-items: left;                      /* Items in the header are justified to the left side without further positioning*/
+    justify-content: left;
+    padding: 0px 20px;                      /* separates items left and right with 20px padding*/
+    background-color: hsl(216, 29%, 73%);
+}
+
+/*Header Customization*/
+
+.Logo {
+    height: 150px;                          
+}
+
+.header_title {
+    position: relative;                     
+    top: 42px;
+}
+
+ .nav-list {
+    margin-left: auto;  
+ }
+
+ .nav-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+ }
+
+ .nav-list a {
+    text-decoration: none;                          /*here I setup the About link to appear as black and elimiate that blueish style of hyperlinks*/
+    color: inherit;
+    position: relative;
+    top: 53px;                                     /*adjust it's position to center it with the header*/
+ }
+
+   a.header_link {
+    text-decoration: none;
+    color: inherit;
+    margin-left: 20px;
+ }
+
+
+ /*Article's customization*/
+
+
+ .Introduction {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;                          /* all of these I needed to center the introduction's text*/
+    background-color: rgb(237, 240, 242);
+ }
+
+div.introduction_main_site {                         /*this I used to center even more the text inside the .Introduction element*/
+    margin: auto;
+    line-height: 3;
+    max-width: 600px;                                /*Max width 600px, ensures the text doesnt become too wide, making it easier to read, even in smaller devices*/
+    width: 90%;                                      /*width 90%, makes it so the text becomes responsive and adapts to the screen size of the reader, so that the text always occupies 90% of the layout*/
+}
+
+article {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin: auto;
+    max-width: 600px;
+    width: 90%;
+    line-height: 3;
+}
+
+
+ /*Footer's customization*/
+
+ footer {
+    margin-top: auto;                           /*margin top: auto; makes the footer stick to the bottom of the site*/
+    background-color: hsl(216, 29%, 73%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+ }
+
+  .linkedin_logo {
+    height: 100px;
+ }
+
+ .footer-left {
+    justify-content: left;
+    position: relative;
+    top: 5px;
+
+ }
+ 
