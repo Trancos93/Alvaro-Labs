@@ -1,6 +1,9 @@
 html {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
   /*Regular*/
 @font-face {
     font-family: 'IBM Plex Mono';
@@ -54,48 +57,44 @@ body {
     overflow: scroll;                        /*Overflow property defines how the excess of content will behave, in this case I'll leave it as scroll. If there's excess text, a scrollbar will appear to help see all the content*/
 }
 
+
+/*Header Customization*/
+
 header {
     display: flex;                          /* although html, body have their own flex declaration, it doesn`t cascade to grandchildren, so each child must have it's own declaration of display: fex; */
-    align-items: left;                      /* Items in the header are justified to the left side without further positioning*/
-    justify-content: left;
+    align-items: center;                      /* Items in the header are justified to the left side without further positioning*/
+    justify-content: flex-start;            /*makes it so that the nav.list sticks to the left side */
     padding: 0px 20px;                      /* separates items left and right with 20px padding*/
     background-color: hsl(216, 29%, 73%);
 }
 
-/*Header Customization*/
 
 .Logo {
     height: 150px;                          
 }
 
-.header_title {
-    position: relative;                     
-    top: 42px;
-}
 
- .nav-list {
-    margin-left: auto;  
- }
-
- .nav-list ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
- }
-
- .nav-list a {
+ .nav-list li a {
     text-decoration: none;                          /*here I setup the About link to appear as black and elimiate that blueish style of hyperlinks*/
-    color: inherit;
-    position: relative;
-    top: 53px;                                     /*adjust it's position to center it with the header*/
+    color: inherit;     
+    margin: 0;
+    padding: 0;                             
  }
 
-   a.header_link {
-    text-decoration: none;
-    color: inherit;
-    margin-left: 20px;
+ .nav-list a:hover {
+    text-decoration: underline;
  }
 
+ .nav-list a:visited {
+    color: #6600cc;
+ }
+
+ .nav-list li {                                 /*styles the list*/
+    list-style: none;                
+    display: inline;
+    margin: 20px;
+ }
+ 
 
  /*Article's customization*/
 
@@ -113,7 +112,8 @@ div.introduction_main_site {                         /*this I used to center eve
     margin: auto;
     line-height: 3;
     max-width: 600px;                                /*Max width 600px, ensures the text doesnt become too wide, making it easier to read, even in smaller devices*/
-    width: 90%;                                      /*width 90%, makes it so the text becomes responsive and adapts to the screen size of the reader, so that the text always occupies 90% of the layout*/
+    width: 90%;    
+    padding: 50px;                                  /*width 90%, makes it so the text becomes responsive and adapts to the screen size of the reader, so that the text always occupies 90% of the layout*/
 }
 
 article {
@@ -125,7 +125,39 @@ article {
     max-width: 600px;
     width: 90%;
     line-height: 3;
+    padding: 50px;
 }
+
+
+    /*Breadcrumb styling*/
+
+
+.breadcrumb li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.breadcrumb li {
+    display: flex;
+    margin: 5px;
+    list-style: none;
+}
+
+.breadcrumb li:hover {
+    text-decoration:  underline;
+}
+
+.breadcrumb li a:visited {
+    color: #6600cc;
+}
+
+.breadcrumb li::before {
+    content: ">";
+    padding: 0px 10px;
+}
+
+
+
 
 
  /*Footer's customization*/
@@ -135,8 +167,7 @@ article {
     background-color: hsl(216, 29%, 73%);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
  }
 
   .linkedin_logo {
@@ -147,6 +178,5 @@ article {
     justify-content: left;
     position: relative;
     top: 5px;
-
  }
  
