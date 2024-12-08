@@ -95,93 +95,51 @@ header {
     margin: 20px;
  }
  
-
- /*Article's customization*/
-
-
- .Introduction {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;                          /* all of these I needed to center the introduction's text*/
-    background-color: rgb(237, 240, 242);
- }
-
-div.introduction_main_site {                         /*this I used to center even more the text inside the .Introduction element*/
-    margin: auto;
-    line-height: 3;
-    max-width: 600px;                                /*Max width 600px, ensures the text doesnt become too wide, making it easier to read, even in smaller devices*/
-    width: 90%;    
-    padding: 50px;                                  /*width 90%, makes it so the text becomes responsive and adapts to the screen size of the reader, so that the text always occupies 90% of the layout*/
-}
-
 article {
     display: flex;
-    align-items: center;
-    text-align: center;
     flex-direction: column;
     margin: auto;
-    max-width: 600px;
-    width: 90%;
-    line-height: 3;
-    padding: 50px;
 }
 
-
-    /*Breadcrumb styling*/
-
-
-.breadcrumb li a {
-    text-decoration: none;
-    color: inherit;
+.color_list li {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 20px;
+    min-width: 300px;
+    border: solid 1px;
 }
 
-.breadcrumb li {
-    display: flex;
-    margin: 5px;
+.color_list li p {
+    text-align: center;
+}
+
+div.content1 {
+    border: solid 1px;
+    margin: 50px;
+    padding: 10px;
+}
+
+div.content2 {
+    border: solid 1px;
+    margin: 50px;
+    padding: 10px;
+}
+
+.grey {
+    background-color: rgb(237, 240, 242);
+}
+.blue {
+    background-color: hsl(216, 29%, 73%);
+}
+.purple {
+    background-color: #6600cc;
+    color: white;
+}
+
+ul.font_list {
     list-style: none;
 }
 
-.breadcrumb li:hover {
-    text-decoration:  underline;
+.font_list li p:first-child {
+    text-decoration: underline;
 }
-
-.breadcrumb li a:visited {
-    color: #6600cc;
-}
-
-.breadcrumb li::before {
-    content: ">";
-    padding: 0px 10px;
-}
-
-
-
-
-
- /*Footer's customization*/
-
- footer {
-    margin-top: auto;                           /*margin top: auto; makes the footer stick to the bottom of the site*/
-    background-color: hsl(216, 29%, 73%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
- }
-
-  .linkedin_logo {
-    height: 100px;
- }
-
- .footer-left {
-    justify-content: left;
-    position: relative;
-    top: 5px;
- }
- 
-
-
-
-
- 
